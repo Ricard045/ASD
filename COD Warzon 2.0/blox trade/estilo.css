@@ -1,0 +1,89 @@
+
+ body {
+    background-color: #6d2121;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.carousel {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+.text-area {
+    float: none;
+    width: 60%;
+}
+.post-container {
+    margin: 20px 20px 0 0;  
+    overflow: auto;
+    padding: 50px;
+    background: white;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 80vh;
+    margin-bottom: 50px;
+}
+.post-thumb {
+    float: right;
+}
+.post-thumb img {
+    display: block;
+    width: 800px;
+    height: 400px;
+}
+.post-content {
+    margin-left: 0px;
+}
+.post-title {
+    font-weight: bold;
+    font-size: 200%;
+    padding-bottom: 20px;
+}
+
+.container{
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.pecausa img {
+    width: 200px; 
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+
+
+.dropdown{
+    padding: 10px 150px;
+}
+.contenido {
+    flex: 1; 
+  }
+  
+  footer {
+    position: absolute;
+    z-index: -1;
+    background-color: #333; 
+    color: #333; 
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+  }
+  

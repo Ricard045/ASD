@@ -1,0 +1,112 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Frutas.com</title>
+    <link rel="stylesheet" href="css.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+     <!--inicio del navbar-->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Frueteria Online</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Productos</a>
+              </li>
+          </ul>
+          
+      </div>
+      <div class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="carritoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Carrito
+              </a>
+              <div class="dropdown-menu" aria-labelledby="carritoDropdown">
+                  <!-- Lista de productos -->
+                  <ul id="carrito" class="list-group">
+                  </ul>
+                  
+                  <!-- Total -->
+                  <h6 class="dropdown-header">Total: $<span id="total">0.00</span></h6>
+              </div>
+          </li>
+      </div>
+  </nav>
+
+
+      <!--tarjetas-->
+    <div class="container">
+      <div class="card" style="width: 18rem;">
+        <img src="https://th-thumbnailer.cdn-si-edu.com/4Nq8HbTKgX6djk07DqHqRsRuFq0=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/d5/24/d5243019-e0fc-4b3c-8cdb-48e22f38bff2/istock-183380744.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">platano</h5>
+          <p class="card-text">25$</p>
+          <li><button onclick="agregarAlCarrito('Platano', 25.00)">Agregar al Carrito</button></li>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Aguakate</h5>
+          <p class="card-text">60$</p>
+          <li> <button onclick="agregarAlCarrito('Aguakate', 60.00)">Agregar al Carrito</button></li>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://www.semana.com/resizer/aFlCrqRB5tcLkt-aB8oGfRK9VZQ=/1280x720/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/UM4AUXGP25H6NM6CS7UENR32DQ.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Manzana verde</h5>
+          <p class="card-text">45$</p>
+          <li> <button onclick="agregarAlCarrito('Manzana verde', 45.00)">Agregar al Carrito</button></li>
+        </div>
+      </div>
+    </div>
+
+ 
+  
+
+  <!-- Incluir los archivos JavaScript de Bootstrap y jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+      // Función para agregar un producto al carrito (misma función que antes)
+      function agregarAlCarrito(nombre, precio) {
+          const carrito = document.getElementById("carrito");
+          const totalElement = document.getElementById("total");
+          const total = parseFloat(totalElement.innerText);
+
+          const nuevoProducto = document.createElement("li");
+          nuevoProducto.textContent = `${nombre} - $${precio.toFixed(2)}`;
+          nuevoProducto.classList.add("list-group-item");
+
+          const botonEliminar = document.createElement("button");
+          botonEliminar.textContent = "Eliminar";
+          botonEliminar.className = "btn btn-danger btn-sm float-right";
+          botonEliminar.onclick = function() {
+              const nuevoTotal = total - precio;
+              totalElement.innerText = nuevoTotal.toFixed(2);
+              carrito.removeChild(nuevoProducto);
+          };
+          nuevoProducto.appendChild(botonEliminar);
+
+          let nuevoTotal = total + precio;
+          totalElement.innerText = nuevoTotal.toFixed(2);
+
+          carrito.appendChild(nuevoProducto);
+      }
+  </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

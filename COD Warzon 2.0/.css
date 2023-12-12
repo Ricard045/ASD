@@ -1,0 +1,27 @@
+body { background-color: rgb(255, 255, 255)
+
+}
+header{
+    background-color:  rgb(255, 81, 0)
+
+}
+
+.menu {
+    width: 900px;
+ 
+}
+.nav-link{
+    background-color: rgb(255, 81, 0);
+    padding: 10px 15px;
+    color: aliceblue;
+    text-transform: uppercase;
+    
+}
+.nav-link:hover{
+    background-color: rgb(0, 176, 240);
+
+}
+
+.logo{
+    width: 120px;
+}
